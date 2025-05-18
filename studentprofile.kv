@@ -1,0 +1,156 @@
+MDScreen:
+    name: "studentprofile"
+    MDFloatLayout:
+        md_bg_color: rgba(246,250,255,255)
+
+        ProfileCard:
+            size_hint_y: 0.4
+            pos_hint: {"center_y":0.95}
+            elevation: 5
+            md_bg_color: rgba(254,157,182,255)
+            radius:[180]
+        MDFloatLayout:
+            size_hint_x:0.31
+            size_hint_y:0.19
+            pos_hint:{"center_x":0.5,"center_y":0.7}
+            canvas:
+                Color:
+                    rgb: (1,1,1,1)
+                Ellipse:
+                    size: self.size
+                    pos: self.pos
+        MDFloatLayout:
+            size_hint_x:0.3
+            size_hint_y:0.18
+            pos_hint:{"center_x":0.5,"center_y":0.7}
+            canvas:
+                Color:
+                    rgb: (1,1,1,1)
+                Ellipse:
+                    size: self.size
+                    pos: self.pos
+                    source: "ksuhal.jpg.jpg"
+        MDFloatLayout:
+            pos_hint: {"center_y":0.7}
+            size_hint_y: 0.6
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint: {"center_y":0.91}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: rgba(71,92,119,255)
+                on_release:
+                    root.manager.current = "studenthome"
+            MDLabel:
+                text: "Your Profile"
+                font_name: "DPoppins"
+                font_size: "30sp"
+                pos_hint: {"center_x":0.76,"center_y":0.82}
+                color: rgba(71,92,119,255)
+
+
+
+    MDBoxLayout:
+        orientation: "vertical"
+        pos_hint: {"center_y":0.23}
+        size_hint_y:0.65
+        radius:[20,20,20,20]
+        md_bg_color: rgba(254,157,182,255)
+        padding:"10dp"
+        spacing: "5dp"
+        ScrollView:
+            MDList:
+                spacing: "10dp"
+                MDCard:
+                    pos_hint_y: 0.95
+                    size_hint_y:None
+                    height:'50dp'
+                    md_bg_color: rgba(205, 242, 225, 255)
+                    radius:[25]
+                    padding: "15dp"
+                    MDLabel:
+                        id: student_id_label
+                        text: " "
+                        pos_hint: {"center_x":0.5,"center_y":0.37}
+                        halign: "center"
+                        font_name: "DPoppins"
+                        font_size: "20sp"
+                        color: rgba(71,92,119,255)
+                    MDIcon:
+                        icon: "account-tie"
+                        pos_hint: {"center_x":0.5,"center_y":0.5}
+                        theme_text_color: "Custom"
+                        text_color: rgba(71,92,119,255)
+                        font_size: "25sp"
+                MDCard:
+                    size_hint_y:None
+                    height:'50dp'
+                    md_bg_color: rgba(205, 242, 225, 255)
+                    radius:[25]
+                    padding: "15dp"
+                    MDLabel:
+                        id: email_id
+                        text: " "
+                        pos_hint: {"center_x":0.565,"center_y":0.25}
+                        halign: "center"
+                        font_name: "DPoppins"
+                        font_size: "12sp"
+                        color: rgba(71,92,119,255)
+                    MDIcon:
+                        icon: "email-outline"
+                        pos_hint: {"center_x":0.5,"center_y":0.5}
+                        theme_text_color: "Custom"
+                        text_color: rgba(71,92,119,255)
+                        font_size: "25sp"
+
+                MDCard:
+                    size_hint_y:None
+                    height:'50dp'
+                    md_bg_color: rgba(205, 242, 225, 255)
+                    radius:[25]
+                    padding: "15dp"
+                    MDLabel:
+                        id: phoneno
+                        text: " "
+                        pos_hint: {"center_x":0.5,"center_y":0.5}
+                        halign: "center"
+                        font_name: "DPoppins"
+                        font_size: "12sp"
+                        color: rgba(71,92,119,255)
+                    MDIcon:
+                        icon: "cellphone-basic"
+                        pos_hint: {"center_x":0.5,"center_y":0.5}
+                        theme_text_color: "Custom"
+                        text_color: rgba(71,92,119,255)
+                        font_size: "25sp"
+
+
+                MDRaisedButton:
+                    pos_hint: {"center_x":0.5,"center_y":0.5}
+                    text: "Update Your Profile"
+                    #elevation:3
+                    size_hint_x:0.5
+                    size_hint_y:0.1
+
+                MDRaisedButton:
+                    pos_hint: {"center_x":0.5,"center_y":0.5}
+                    text: "Logout from the page"
+                    size_hint_x:0.5
+                    size_hint_y:0.1
+                    #elevation:3
+                    on_release:
+                        app.delete_stored_email()
+                        app.onboarding(5)
+                MDCard:
+                    size_hint_y:None
+                    height:'30dp'
+                    md_bg_color: rgba(254,157,182,255)
+                    radius:[50,50,50,50]
+                    padding: "15dp"
+                    MDLabel:
+                        text: " "
+                        font_name: "DPoppins"
+                        theme_text_color: "Custom"
+                        text_color: rgba(220,225,225,255)
+                        font_size: "15sp"
+

@@ -1,0 +1,38 @@
+MDScreen:
+    name: "viewvideostoadmin"
+    #on_enter:
+        #app.display_videos_for_admin(str(root.course_id))
+    MDFloatLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: rgba(254,157,182,255)
+            title: '            Course Contents'
+            specific_text_color: 1, 1, 1, 1
+            pos_hint: { "center_x":0.5,"center_y":0.95}
+        MDIconButton:
+            icon : "arrow-left"
+            pos_hint : {"center_x":0.1,"center_y" :0.95}
+            user_font_size: "30sp"
+            theme_text_color: "Custom"
+            text_color : rgba(255,255,255,255)
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'adminhome'
+        MDBoxLayout:
+            orientation: "vertical"
+            pos_hint: {"center_y":0.5}
+            size_hint_y:0.75
+            ScrollView:
+                size_hint:
+                MDList:
+                    id: viewvideoliststoadmin
+        MDFloatLayout:
+            size_hint: 0.95, 0.1
+            pos_hint: {"center_x":0.5, "center_y":0.06}
+            MDRaisedButton:
+                text: "ADD CONTENTS"
+                size_hint_x:0.9
+                pos_hint: { "center_x":0.5,"center_y":0.5}
+                md_bg_color: rgba(254,157,182,255)
+                on_release:
+                    root.manager.current = "addvideosofcourse"

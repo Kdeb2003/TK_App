@@ -1,0 +1,144 @@
+MDScreen:
+    name: "Student's Participation"
+    MDFloatLayout:
+        MDTopAppBar:
+            pos_hint:{"center_x": 0.5, "center_y": 0.95}
+            md_bg_color: rgba(255, 102, 153,)
+            theme_text_color: "Custom"
+            text_color: rgba(54, 6, 0, 255)
+        MDLabel:
+            text: "[b]Student's Performance[/b]"
+            pos_hint:{"center_x": 0.7, "center_y": 0.94}
+            font_size: "21dp"
+            markup:True
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint:{"center_x":0.05,"center_y":0.94}
+            on_release:
+                root.manager.current = 'Student Dashboard'
+    ScrollView:
+        bar_color: [0, 0, 255, 1]
+        pos_hint: {"center_x":0.5,"center_y":0.35}
+        bar_width: 2
+        MDFloatLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: dp(750)
+
+            MDLabel:
+                text: 'Enter Your Name'
+                pos_hint: {"center_x": 0.55, "center_y": 0.99}
+                mark_up: True
+                theme_text_color: "Custom"
+                text_color: rgba(54, 6, 0, 255)
+                bold: True
+                font_style: "H6"
+                font_size: "20dp"
+
+            MDTextField:
+                id: Name
+                hint_text: "Full Name"
+                required: True
+                helper_text_mode: "on_error"
+                pos_hint: {"center_x": 0.5, "center_y":0.93}
+                halign: 'center'
+                required: True
+                helper_text_mode: "on_error"
+                mode: "rectangle"
+                size: ("50dp", "50dp")
+                size_hint_x: 0.9
+
+            MDLabel:
+                text: "Date of Event"
+                pos_hint: {"center_x": 0.55, "center_y": 0.845}
+                mark_up: True
+                bold: True
+                theme_text_color: "Custom"
+                text_color: rgba(54, 6, 0, 255)
+                font_style: "H6"
+                font_size: "20dp"
+
+            MDTextField:
+                id: Date
+                hint_text: "YYYY/MM/DD"
+                required: True
+                helper_text_mode: "on_error"
+                pos_hint: {"center_x": 0.5, "center_y":0.79}
+                halign: 'center'
+                mode: "rectangle"
+                size: ("50dp", "50dp")
+                size_hint_x: 0.9
+
+            MDLabel:
+                text: "Select Category"
+                pos_hint: {"center_x": 0.55, "center_y": 0.71}
+                mark_up: True
+                bold: True
+                theme_text_color: "Custom"
+                text_color: rgba(54, 6, 0, 255)
+                font_style: "H6"
+                font_size: "20dp"
+
+            Spinner:
+                id: event_type_spinner
+                hint_text: "Select Event Type"
+                text: "Performance Category"
+                values: ["Dance", "Song", "Recitation", "Quiz", "Debate", "Cultural Program", "Others"]
+                pos_hint: {"center_x": 0.5, "y": 0.6}
+                size_hint_x: 0.9
+                size_hint_y: None
+                height: "50dp"
+                on_text: app.on_dropdown_select(self, self.text, category_desc, other_event_name)
+
+            MDLabel:
+                text: "Add Category Description"
+                pos_hint: {"center_x": 0.55, "center_y": 0.56}
+                mark_up: True
+                bold: True
+                theme_text_color: "Custom"
+                text_color: rgba(54, 6, 0, 255)
+                font_style: "H6"
+                font_size: "20dp"
+
+            MDTextField:
+                id: category_desc
+                hint_text: "Category Description"
+                disabled: True
+                pos_hint: {"center_x": 0.5, "center_y":0.5}
+                halign: 'center'
+                mode: "rectangle"
+                size: ("50dp", "50dp")
+                size_hint_x: 0.9
+
+            MDLabel:
+                text: "Add Other Event Name"
+                pos_hint: {"center_x": 0.55, "center_y": 0.42}
+                mark_up: True
+                bold: True
+                theme_text_color: "Custom"
+                text_color: rgba(54, 6, 0, 255)
+                font_style: "H6"
+                font_size: "20dp"
+
+            MDTextField:
+                id: other_event_name
+                hint_text: "Other Event Name"
+                disabled: True
+                pos_hint: {"center_x": 0.5, "center_y":0.36}
+                halign: 'center'
+                mode: "rectangle"
+                size: ("50dp", "50dp")
+                size_hint_x: 0.9
+
+            MDRaisedButton:
+                text: "[b]Submit[/b]"
+                size_hint_x: 0.95
+                size_hint_y: 0.07
+                pos_hint: {"center_x":0.5,"center_y":0.25}
+                theme_text_color: "Custom"
+                text_color: rgba(54, 6, 0, 255)
+                md_bg_color: rgba(255, 102, 153)
+                font_size: "17dp"
+                markup: True
+                on_press:
+                    app.insert_data_to_mysql(str(Name.text), str(Date.text), str(event_type_spinner.text), str(category_desc.text), str(other_event_name.text))

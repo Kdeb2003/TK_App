@@ -1,0 +1,44 @@
+MDScreen:
+    name:"onboarding3"
+    canvas.before:
+        Rectangle:
+            pos: 0,420
+            size: 400,300
+            source: "register-removebg-preview.png"
+
+
+    MDFloatLayout:
+        orientation: 'vertical'
+
+        MDLabel:
+            text: 'Register'
+            font_name: 'MPoppins'
+            font_size: "40dp"
+            halign: "center"
+            pos_hint: {"center_x":0.5,"center_y":0.55}
+            theme_text_color: "Custom"
+            text_color: rgba(255,171,72,255)
+        MDLabel:
+            text: 'Register today and starting learning'
+            font_name: 'BPoppins'
+            font_size: "22dp"
+            halign: "center"
+            pos_hint: {"center_x":0.5,"center_y":0.4}
+            theme_text_color: "Custom"
+            text_color: rgba(223, 161, 126,255)
+        MDRaisedButton:
+            text: 'Login'
+            pos_hint: {"center_x":0.5,"center_y":0.17}
+            size_hint_x:0.9
+            md_bg_color: rgba(254, 157, 182,255)
+            font_style: "Button"
+            on_release:
+                app.root.current = 'login'
+        MDRaisedButton:
+            text: 'Register'
+            pos_hint: {"center_x":0.5,"center_y":0.08}
+            size_hint_x:0.9
+            md_bg_color: rgba(254, 157, 182,255)
+            font_style: "Button"
+            on_release:
+                app.root.current = 'selection'

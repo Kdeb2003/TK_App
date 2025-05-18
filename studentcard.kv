@@ -1,0 +1,36 @@
+#:import STANDARD_INCREMENT kivymd.material_resources.STANDARD_INCREMENT
+#:import Animation kivy.animation.Animation
+
+
+<CardItem1@RelativeLayout>
+    size_hint_y:None
+    height:'160dp'
+
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        padding: "20dp"
+        spacing: "20dp"
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_press:
+                app.show_applied_events_to_student()
+            Image:
+                source: "Dance-removebg-preview.png"
+                size_hint: 1, 1
+                #allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Applied Events[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+

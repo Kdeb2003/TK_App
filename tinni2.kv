@@ -1,0 +1,286 @@
+#:import STANDARD_INCREMENT kivymd.material_resources.STANDARD_INCREMENT
+#:import Animation kivy.animation.Animation
+<Spacer@Widget>
+    size_hint_y: None
+    height: "12dp"
+
+
+<CardItems@RelativeLayout>
+    size_hint_y:None
+    height:'300dp'
+    MDCard:
+        radius:[30]
+        elevation: 3
+        #md_bg_color: rgba(161, 173, 181,255)
+        on_release:
+            app.gotocourse1videosadmin(str(coursesid.text))
+            #app.xxx()
+        MDFloatLayout:
+            id: box
+            #padding: 0,0,"48dp","12dp"
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349.5, 165
+                pos_hint: {"center_x":0.5,"center_y":0.222}
+                canvas:
+                    Color:
+                        rgba: rgba(242,255,178,255)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [0,0,30,30]
+                MDLabel:
+                    id: coursename
+                    text: "Course Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.7}
+                    font_name: "MPoppins"
+                    font_size: "20dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: coursesid
+                    text: "Starting Date"
+                    pos_hint: {"center_x":0.55,"center_y":0.4}
+                    font_name: "MPoppins"
+                    font_size: "16dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: coursestartingdate
+                    text: "Starting Date"
+                    pos_hint: {"center_x":0.55,"center_y":0.2}
+                    font_name: "MPoppins"
+                    font_size: "16dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: courseteachername
+                    text: "Teacher Name"
+                    pos_hint: {"center_x":1,"center_y":0.4}
+                    font_name: "MPoppins"
+                    font_size: "15dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+
+            MDFloatLayout:
+                size_hint: None, None
+                size: 340, 230
+                pos_hint: {"center_x":0.5,"center_y":0.68}
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    RoundedRectangle:
+                        #id: thumbnailimage
+                        size: self.size
+                        pos: self.pos
+                        radius: [30,30,30,30]
+                        source: "history vector.jpg"
+                #AsyncImage:
+                #    id: hula
+                #    pos_hint: {"center_x":0.5,"center_y":0.68}
+                #    size: 320, 200
+
+
+<CardItems1@RelativeLayout>
+    size_hint_y:None
+    height:'300dp'
+    MDCard:
+        radius:[30]
+        elevation: 3
+        #md_bg_color: rgba(161, 173, 181,255)
+        MDFloatLayout:
+            id: box
+            #padding: 0,0,"48dp","12dp"
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349.5, 165
+                pos_hint: {"center_x":0.5,"center_y":0.222}
+                canvas:
+                    Color:
+                        rgba: rgba(242,255,178,255)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [0,0,30,30]
+                MDLabel:
+                    id: coursename
+                    text: "Course Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.7}
+                    font_name: "MPoppins"
+                    font_size: "20dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: coursestartingdate
+                    text: "Starting Date"
+                    pos_hint: {"center_x":0.55,"center_y":0.45}
+                    font_name: "MPoppins"
+                    font_size: "17dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: courseteachername
+                    text: "Teacher Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.2}
+                    font_name: "MPoppins"
+                    font_size: "15dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349, 239
+                pos_hint: {"center_x":0.5,"center_y":0.68}
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    RoundedRectangle:
+                        id: thumbnailimage
+                        size: self.size
+                        pos: self.pos
+                        radius: [30,30,30,30]
+                        source: "politicalscience.jpg"
+<CardItems2@RelativeLayout>
+    size_hint_y:None
+    height:'300dp'
+    MDCard:
+        radius:[30]
+        elevation: 3
+        #md_bg_color: rgba(161, 173, 181,255)
+        MDFloatLayout:
+            id: box
+            #padding: 0,0,"48dp","12dp"
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349.5, 165
+                pos_hint: {"center_x":0.5,"center_y":0.222}
+                canvas:
+                    Color:
+                        rgba: rgba(242,255,178,255)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [0,0,30,30]
+                MDLabel:
+                    id: coursename
+                    text: "Course Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.7}
+                    font_name: "MPoppins"
+                    font_size: "20dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: coursestartingdate
+                    text: "Starting Date"
+                    pos_hint: {"center_x":0.55,"center_y":0.45}
+                    font_name: "MPoppins"
+                    font_size: "17dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: courseteachername
+                    text: "Teacher Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.2}
+                    font_name: "MPoppins"
+                    font_size: "15dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349, 239
+                pos_hint: {"center_x":0.5,"center_y":0.68}
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    RoundedRectangle:
+                        id: thumbnailimage
+                        size: self.size
+                        pos: self.pos
+                        radius: [30,30,30,30]
+                        source: "geogrpahy.JPG"
+<CardItems3@RelativeLayout>
+    size_hint_y:None
+    height:'300dp'
+    MDCard:
+        radius:[30]
+        elevation: 3
+        #md_bg_color: rgba(161, 173, 181,255)
+        MDFloatLayout:
+            id: box
+            #padding: 0,0,"48dp","12dp"
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349.5, 165
+                pos_hint: {"center_x":0.5,"center_y":0.222}
+                canvas:
+                    Color:
+                        rgba: rgba(242,255,178,255)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [0,0,30,30]
+                MDLabel:
+                    id: coursename
+                    text: "Course Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.7}
+                    font_name: "MPoppins"
+                    font_size: "20dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: coursestartingdate
+                    text: "Starting Date"
+                    pos_hint: {"center_x":0.55,"center_y":0.45}
+                    font_name: "MPoppins"
+                    font_size: "17dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+                MDLabel:
+                    id: courseteachername
+                    text: "Teacher Name"
+                    pos_hint: {"center_x":0.55,"center_y":0.2}
+                    font_name: "MPoppins"
+                    font_size: "15dp"
+                    theme_text_color: "Custom"
+                    text_color: rgba(98, 92, 97,255)
+
+            MDFloatLayout:
+                size_hint: None, None
+                size: 349, 239
+                pos_hint: {"center_x":0.5,"center_y":0.68}
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    RoundedRectangle:
+                        id: thumbnailimage
+                        size: self.size
+                        pos: self.pos
+                        radius: [30,30,30,30]
+                        source: "economics8.jpg"
+<CardItems4@RelativeLayout>
+    size_hint_y:None
+    height:'100dp'
+
+    MDCard:
+        radius:[30]
+        elevation: 3
+        #md_bg_color: rgba(161, 173, 181,255)
+        MDFloatLayout:
+            Image:
+                source: "tkf-logo1.png"
+                size_hint: None,None
+                size: 200,200
+                pos_hint: {"center_x":0.2,"center_y":0.6}
+            MDLabel:
+                text: "Visit Our\nWebsite..."
+                font_name: "DPoppins"
+                font_size: "20dp"
+                theme_text_color: "Custom"
+                text_color: rgba(95,90,87,255)
+                pos_hint: {"center_x":0.95,"center_y":0.5}
+
+<CardItems5@RelativeLayout>
+    size_hint_y:None
+    height:'120dp'
+

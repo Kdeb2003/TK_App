@@ -1,0 +1,90 @@
+MDScreen:
+    name: "student registration"
+    MDFloatLayout:
+        MDIconButton:
+            icon : "arrow-left"
+            pos_hint : {"center_y" :0.95}
+            user_font_size: "30sp"
+            theme_text_color: "Custom"
+            text_color : rgba(26, 24, 58, 255)
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'selection'
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(48)
+            padding: dp(10)
+            MDLabel:
+                text: "Register"
+                font_style: 'H5'
+                theme_text_color: "Custom"
+                text_color: rgba(0,220,230,255)
+                halign: 'center'
+                valign: 'center'
+                font_size: "50dp"
+
+        ScrollView:
+            size_hint_y: None
+            height: dp(500)
+
+            MDBoxLayout:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(10)
+                spacing: dp(20)
+
+                MDTextField:
+                    id: username1
+                    hint_text: "Username"
+                    required: True
+                    mode: "rectangle"
+                    multiline: False
+
+                MDTextField:
+                    id: email1
+                    hint_text: "Email"
+                    required: True
+                    mode: "rectangle"
+                    multiline: False
+
+                MDTextField:
+                    id: password1
+                    hint_text: "Password"
+                    required: True
+                    mode: "rectangle"
+                    multiline: False
+
+                MDTextField:
+                    id: confirm_password1
+                    hint_text: "Confirm Password"
+                    required: True
+                    mode: "rectangle"
+                    multiline: False
+
+                MDTextField:
+                    id: phone_number1
+                    hint_text: "Phone Number"
+                    required: True
+                    mode: "rectangle"
+                    multiline: False
+
+                MDTextField:
+                    id: address1
+                    hint_text: "Address"
+                    required: True
+                    mode: "rectangle"
+                    multiline: True
+                MDRaisedButton:
+                    text: "Submit"
+                    font_size: "20dp"
+                    size_hint_x: 0.99
+                    width: root.width
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5}
+                    on_press:
+                        app.submit_student(username1.text,email1.text, password1.text, confirm_password1.text,phone_number1.text,address1.text)
+

@@ -1,0 +1,28 @@
+MDScreen:
+    name: "applied dance list"
+    MDFloatLayout:
+        MDTopAppBar:
+            pos_hint:{"center_x": 0.5, "center_y": 0.95}
+            md_bg_color: rgba(255, 102, 153,)
+            theme_text_color: "Custom"
+            text_color: rgba(54, 6, 0, 255)
+        MDLabel:
+            text: "[b]Dance[/b]"
+            pos_hint:{"center_x": 0.92, "center_y": 0.94}
+            font_size: "21dp"
+            markup:True
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint:{"center_x":0.05,"center_y":0.94}
+            on_release:
+                root.manager.current = 'eventmanager_sees_students_apply'
+    MDBoxLayout:
+        orientation: "vertical"
+        pos_hint: {"center_y":0.52}
+        size_hint_y:0.75
+        ScrollView:
+
+            bar_color: [0, 0, 255, 1]
+            bar_width: 2
+            MDList:
+                id: dance_list

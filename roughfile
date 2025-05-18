@@ -1,0 +1,13 @@
+                MDFloatLayout:
+
+                    MDIcon:
+                        icon: "alert-circle-outline"
+                        pos_hint: {"center_x":0.1,"center_y":0.5}
+                        size_hint:0.02,0.02
+                    MDLabel:
+                        text: "Lesson titles are displayed publicly\nwherever required."
+                        font_name: "DPoppins"
+                        font_size: "12sp"
+                        pos_hint: {"center_x":0.65,"center_y":0.5}
+                        #theme_text_color: "Custom"
+                        #text_color: rgba(222, 254, 237,255)

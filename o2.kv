@@ -1,0 +1,35 @@
+MDScreen
+    name: "onboarding2"
+
+    canvas.before:
+        Rectangle:
+            pos: 0,350
+            size: 400,350
+            source: "newvector4.png"
+
+    MDFloatLayout:
+
+        MDLabel:
+            text: '"We make your\ndreams come true "'
+            font_name: 'MPoppins'
+            font_size: "22dp"
+            halign: "center"
+            pos_hint: {"center_x":0.5,"center_y":0.4}
+            theme_text_color: "Custom"
+            text_color: rgba(255,171,72,255)
+        MDLabel:
+            text: 'Online lectures, Notes, Guidance'
+            font_name: 'MPoppins'
+            font_size: "15dp"
+            halign: "center"
+            pos_hint: {"center_x":0.5,"center_y":0.2}
+            theme_text_color: "Custom"
+            text_color: rgba(142, 97, 58,255)
+        MDRaisedButton:
+            text: 'Next'
+            pos_hint: {"center_x":0.5,"center_y":0.08}
+            size_hint_x:0.9
+            md_bg_color: rgba(254, 157, 182,255)
+            font_style: "Button"
+            on_release:
+                app.root.current = 'onboarding3'

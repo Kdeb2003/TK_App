@@ -1,0 +1,37 @@
+MDScreen:
+    name: "onboarding1"
+
+    canvas.before:
+        Rectangle:
+            pos: 0,400
+            size: 400,300
+            source: "vector3removedbackground.png"
+    MDFloatLayout:
+
+        MDLabel:
+            text: 'Welcome!!!'
+            font_name: 'MPoppins'
+            font_size: "35dp"
+            halign: "center"
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+            theme_text_color: "Custom"
+            text_color: rgba(255,171,72,255)
+
+        MDLabel:
+            id: message_label
+            text: ''
+            font_name: 'MPoppins'
+            font_size: "18dp"
+            halign: "center"
+            pos_hint: {"center_x":0.5,"center_y":0.3}
+            theme_text_color: "Custom"
+            text_color: rgba(255,171,72,255)
+
+        MDRaisedButton:
+            text: 'Next'
+            pos_hint: {"center_x":0.5,"center_y":0.08}
+            size_hint_x:0.9
+            md_bg_color: rgba(254, 157, 182,255)
+            font_style: "Button"
+            on_release: app.root.current = 'onboarding2'
+

@@ -1,0 +1,204 @@
+#:import STANDARD_INCREMENT kivymd.material_resources.STANDARD_INCREMENT
+#:import Animation kivy.animation.Animation
+
+
+<CardItem1@RelativeLayout>
+    size_hint_y:None
+    height:'160dp'
+
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        padding: "20dp"
+        spacing: "20dp"
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_press:
+                app.show_applied_dance_list()
+            Image:
+                source: "Dance-removebg-preview.png"
+                size_hint: 1, 1
+                #allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Dance[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 0
+            #on_press:
+            #    app.on_click_StudentPerformance_list_tofm()
+           # on_press: app.root.current= "huh"
+            Image:
+                source: "Song.png"
+                size_hint: 1, 1
+                allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Song[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+<CardItem2@RelativeLayout>
+    size_hint_y:None
+    height:'160dp'
+
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        padding: "20dp"
+        spacing: "20dp"
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            #on_press:
+            #    app.on_click_showstudent_list_topo()
+            Image:
+                source: "recitation-removebg-preview.png"
+                size_hint: 1, 1
+                #allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Recitation[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 0
+            #on_press:
+            #    app.on_click_StudentPerformance_list_tofm()
+           # on_press: app.root.current= "huh"
+            Image:
+                source: "quiz-removebg-preview.png"
+                size_hint: 1, 1
+                allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Quiz[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+
+<CardItem3@RelativeLayout>
+    size_hint_y:None
+    height:'160dp'
+
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        padding: "20dp"
+        spacing: "20dp"
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            #on_press:
+            #    app.on_click_showstudent_list_topo()
+            Image:
+                source: "debate-removebg-preview.png"
+                size_hint: 1, 1
+                #allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Debate[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 0
+            #on_press:
+            #    app.on_click_StudentPerformance_list_tofm()
+           # on_press: app.root.current= "huh"
+            Image:
+                source: "others-removebg-preview.png"
+                size_hint: 1, 1
+                allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Others[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
+<CardItem4@RelativeLayout>
+    size_hint_y:None
+    height:'160dp'
+
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        padding: "20dp"
+        spacing: "20dp"
+        MDCard:
+            md_bg_color: rgba(255, 155, 189,)
+            orientation: 'vertical'
+            size_hint: 1,1
+            radius:[20]
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            #on_press:
+            #    app.on_click_showstudent_list_topo()
+            Image:
+                source: "cultural_program-removebg-preview.png"
+                size_hint: 1, 1
+                #allow_stretch: True
+                keep_rotate: False
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            MDLabel:
+                text: "[b]Cultural Program[/b]"
+                size_hint_y: None
+                height: "25dp"
+                font_size: "17dp"
+                halign: "center"
+                valign: "middle"
+                markup: True
